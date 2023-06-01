@@ -104,7 +104,7 @@ class _RealmCore {
 
   final encryptionKeySize = 64;
   late final Logger defaultRealmLogger;
-  late StreamSubscription<Level?> realmLoggerLevelChangedSubscipiton;
+  late StreamSubscription<Level?> realmLoggerLevelChangedSubscription;
   // ignore: unused_field
   static late final _RealmCore _instance;
 
@@ -112,14 +112,14 @@ class _RealmCore {
     // This disables creation of a second _RealmCore instance effectivelly making `realmCore` global variable readonly
     _instance = this;
 
-    // This prevents reentrancy if `realmCore` global variable is accessed during _RealmCore construction
+    // This prevents reentrance if `realmCore` global variable is accessed during _RealmCore construction
     realmCore = this;
     defaultRealmLogger = _initDefaultLogger(scheduler);
   }
 
   Logger _initDefaultLogger(Scheduler scheduler) {
     final logger = Logger.detached('Realm')..level = Level.INFO;
-    realmLoggerLevelChangedSubscipiton = logger.onLevelChanged.listen((logLevel) => loggerSetLogLevel(logLevel ?? RealmLogLevel.off, scheduler.nativePort));
+    realmLoggerLevelChangedSubscription = logger.onLevelChanged.listen((logLevel) => loggerSetLogLevel(logLevel ?? RealmLogLevel.off, scheduler.nativePort));
 
     bool isDefaultLogger = _realmLib.realm_dart_init_core_logger(logger.level.toInt());
     if (isDefaultLogger) {
