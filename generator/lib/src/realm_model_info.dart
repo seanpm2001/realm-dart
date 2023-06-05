@@ -42,6 +42,7 @@ class RealmModelInfo {
         yield '';
       }
 
+      yield '@ejson';
       yield '$name(';
       {
         final required = allSettable.where((f) => f.isRequired || f.isPrimaryKey);

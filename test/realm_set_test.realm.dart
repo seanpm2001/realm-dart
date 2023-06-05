@@ -7,6 +7,7 @@ part of 'realm_set_test.dart';
 // **************************************************************************
 
 class Car extends _Car with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Car(
     String make,
   ) {
@@ -39,6 +40,7 @@ class Car extends _Car with RealmEntity, RealmObjectBase, RealmObject {
 
 class TestRealmSets extends _TestRealmSets
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   TestRealmSets(
     int key, {
     Set<bool> boolSet = const {},

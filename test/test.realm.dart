@@ -7,6 +7,7 @@ part of 'test.dart';
 // **************************************************************************
 
 class Car extends _Car with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Car(
     String make,
   ) {
@@ -38,6 +39,7 @@ class Car extends _Car with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Person extends _Person with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Person(
     String name,
   ) {
@@ -69,6 +71,7 @@ class Person extends _Person with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Dog extends _Dog with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Dog(
     String name, {
     int? age,
@@ -118,6 +121,7 @@ class Dog extends _Dog with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Team extends _Team with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Team(
     String name, {
     Iterable<Person> players = const [],
@@ -172,6 +176,7 @@ class Team extends _Team with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Student extends _Student with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Student(
     int number, {
     String? name,
@@ -230,6 +235,7 @@ class Student extends _Student with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class School extends _School with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   School(
     String name, {
     String? city,
@@ -305,6 +311,7 @@ class School extends _School with RealmEntity, RealmObjectBase, RealmObject {
 
 class RemappedClass extends $RemappedClass
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   RemappedClass(
     String remappedProperty, {
     Iterable<RemappedClass> listProperty = const [],
@@ -355,6 +362,7 @@ class RemappedClass extends $RemappedClass
 }
 
 class Task extends _Task with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Task(
     ObjectId id,
   ) {
@@ -387,6 +395,7 @@ class Task extends _Task with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Product extends _Product with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Product(
     ObjectId id,
     String name,
@@ -431,6 +440,7 @@ class Product extends _Product with RealmEntity, RealmObjectBase, RealmObject {
 
 class Schedule extends _Schedule
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Schedule(
     ObjectId id, {
     Iterable<Task> tasks = const [],
@@ -475,6 +485,7 @@ class Schedule extends _Schedule
 
 class AllTypes extends _AllTypes
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   AllTypes(
     String stringProp,
     bool boolProp,
@@ -660,6 +671,7 @@ class AllTypes extends _AllTypes
 
 class LinksClass extends _LinksClass
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   LinksClass(
     Uuid id, {
     LinksClass? link,
@@ -716,6 +728,7 @@ class LinksClass extends _LinksClass
 
 class AllCollections extends _AllCollections
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   AllCollections({
     Iterable<String> strings = const [],
     Iterable<bool> bools = const [],
@@ -935,6 +948,7 @@ class AllCollections extends _AllCollections
 
 class NullableTypes extends _NullableTypes
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableTypes(
     ObjectId id,
     ObjectId differentiator, {
@@ -1053,6 +1067,7 @@ class NullableTypes extends _NullableTypes
 }
 
 class Event extends _Event with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Event(
     ObjectId id, {
     String? name,
@@ -1128,6 +1143,7 @@ class Event extends _Event with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Party extends _Party with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Party(
     int year, {
     Friend? host,
@@ -1192,6 +1208,7 @@ class Party extends _Party with RealmEntity, RealmObjectBase, RealmObject {
 class Friend extends _Friend with RealmEntity, RealmObjectBase, RealmObject {
   static var _defaultsSet = false;
 
+  @ejson
   Friend(
     String name, {
     int age = 42,
@@ -1259,6 +1276,7 @@ class Friend extends _Friend with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class When extends _When with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   When(
     DateTime dateTimeUtc,
     String locationName,
@@ -1302,6 +1320,7 @@ class When extends _When with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Player extends _Player with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Player(
     String name, {
     Game? game,
@@ -1354,6 +1373,7 @@ class Player extends _Player with RealmEntity, RealmObjectBase, RealmObject {
 }
 
 class Game extends _Game with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Game({
     Iterable<Player> winnerByRound = const [],
   }) {
@@ -1390,6 +1410,7 @@ class Game extends _Game with RealmEntity, RealmObjectBase, RealmObject {
 
 class AllTypesEmbedded extends _AllTypesEmbedded
     with RealmEntity, RealmObjectBase, EmbeddedObject {
+  @ejson
   AllTypesEmbedded(
     String stringProp,
     bool boolProp,
@@ -1670,6 +1691,7 @@ class AllTypesEmbedded extends _AllTypesEmbedded
 
 class ObjectWithEmbedded extends _ObjectWithEmbedded
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   ObjectWithEmbedded(
     String id, {
     Uuid? differentiator,
@@ -1767,6 +1789,7 @@ class ObjectWithEmbedded extends _ObjectWithEmbedded
 
 class RecursiveEmbedded1 extends _RecursiveEmbedded1
     with RealmEntity, RealmObjectBase, EmbeddedObject {
+  @ejson
   RecursiveEmbedded1(
     String value, {
     RecursiveEmbedded2? child,
@@ -1839,6 +1862,7 @@ class RecursiveEmbedded1 extends _RecursiveEmbedded1
 
 class RecursiveEmbedded2 extends _RecursiveEmbedded2
     with RealmEntity, RealmObjectBase, EmbeddedObject {
+  @ejson
   RecursiveEmbedded2(
     String value, {
     RecursiveEmbedded3? child,
@@ -1911,6 +1935,7 @@ class RecursiveEmbedded2 extends _RecursiveEmbedded2
 
 class RecursiveEmbedded3 extends _RecursiveEmbedded3
     with RealmEntity, RealmObjectBase, EmbeddedObject {
+  @ejson
   RecursiveEmbedded3(
     String value,
   ) {
@@ -1945,6 +1970,7 @@ class RecursiveEmbedded3 extends _RecursiveEmbedded3
 
 class ObjectWithDecimal extends _ObjectWithDecimal
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   ObjectWithDecimal(
     Decimal128 decimal, {
     Decimal128? nullableDecimal,

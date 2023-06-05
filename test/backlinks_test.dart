@@ -16,12 +16,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+import 'package:ejson_annotation/ejson_annotation.dart';
+import 'package:ejson/ejson.dart';
+
 import 'package:test/expect.dart';
 
 import '../lib/realm.dart';
 import 'test.dart';
 
 part 'backlinks_test.realm.dart';
+part 'backlinks_test.g.dart';
 
 @RealmModel()
 class _Source {

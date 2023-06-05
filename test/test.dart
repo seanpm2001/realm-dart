@@ -16,6 +16,9 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+import 'package:ejson_annotation/ejson_annotation.dart';
+import 'package:ejson/ejson.dart';
+
 import 'dart:async';
 import 'dart:collection';
 import 'dart:ffi';
@@ -33,6 +36,7 @@ import '../lib/src/native/realm_core.dart';
 import '../lib/src/configuration.dart';
 
 part 'test.realm.dart';
+part 'test.g.dart';
 
 @RealmModel()
 class _Car {

@@ -8,6 +8,7 @@ part of 'realm_object_test.dart';
 
 class ObjectIdPrimaryKey extends _ObjectIdPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   ObjectIdPrimaryKey(
     ObjectId id,
   ) {
@@ -42,6 +43,7 @@ class ObjectIdPrimaryKey extends _ObjectIdPrimaryKey
 
 class NullableObjectIdPrimaryKey extends _NullableObjectIdPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableObjectIdPrimaryKey(
     ObjectId? id,
   ) {
@@ -77,6 +79,7 @@ class NullableObjectIdPrimaryKey extends _NullableObjectIdPrimaryKey
 
 class IntPrimaryKey extends _IntPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   IntPrimaryKey(
     int id,
   ) {
@@ -110,6 +113,7 @@ class IntPrimaryKey extends _IntPrimaryKey
 
 class NullableIntPrimaryKey extends _NullableIntPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableIntPrimaryKey(
     int? id,
   ) {
@@ -145,6 +149,7 @@ class NullableIntPrimaryKey extends _NullableIntPrimaryKey
 
 class StringPrimaryKey extends _StringPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   StringPrimaryKey(
     String id,
   ) {
@@ -179,6 +184,7 @@ class StringPrimaryKey extends _StringPrimaryKey
 
 class NullableStringPrimaryKey extends _NullableStringPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableStringPrimaryKey(
     String? id,
   ) {
@@ -214,6 +220,7 @@ class NullableStringPrimaryKey extends _NullableStringPrimaryKey
 
 class UuidPrimaryKey extends _UuidPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   UuidPrimaryKey(
     Uuid id,
   ) {
@@ -247,6 +254,7 @@ class UuidPrimaryKey extends _UuidPrimaryKey
 
 class NullableUuidPrimaryKey extends _NullableUuidPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableUuidPrimaryKey(
     Uuid? id,
   ) {
@@ -282,6 +290,7 @@ class NullableUuidPrimaryKey extends _NullableUuidPrimaryKey
 
 class RemappedFromAnotherFile extends _RemappedFromAnotherFile
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   RemappedFromAnotherFile({
     RemappedClass? linkToAnotherClass,
   }) {
@@ -322,6 +331,7 @@ class RemappedFromAnotherFile extends _RemappedFromAnotherFile
 
 class BoolValue extends _BoolValue
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   BoolValue(
     int key,
     bool value,

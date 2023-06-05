@@ -7,6 +7,7 @@ part of 'required_argument.dart';
 // **************************************************************************
 
 class Person extends _Person with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Person(
     String name,
   ) {
