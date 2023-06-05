@@ -9,6 +9,7 @@ part of 'backlinks_test.dart';
 class Source extends _Source with RealmEntity, RealmObjectBase, RealmObject {
   static var _defaultsSet = false;
 
+  @ejson
   Source({
     String name = 'source',
     Target? oneTarget,
@@ -70,6 +71,7 @@ class Source extends _Source with RealmEntity, RealmObjectBase, RealmObject {
 class Target extends _Target with RealmEntity, RealmObjectBase, RealmObject {
   static var _defaultsSet = false;
 
+  @ejson
   Target({
     String name = 'target',
   }) {

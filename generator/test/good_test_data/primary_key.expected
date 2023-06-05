@@ -7,6 +7,7 @@ part of 'primary_key.dart';
 // **************************************************************************
 
 class IntPK extends _IntPK with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   IntPK(
     int id,
   ) {
@@ -39,6 +40,7 @@ class IntPK extends _IntPK with RealmEntity, RealmObjectBase, RealmObject {
 
 class NullableIntPK extends _NullableIntPK
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableIntPK(
     int? id,
   ) {
@@ -73,6 +75,7 @@ class NullableIntPK extends _NullableIntPK
 
 class StringPK extends _StringPK
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   StringPK(
     String id,
   ) {
@@ -105,6 +108,7 @@ class StringPK extends _StringPK
 
 class NullableStringPK extends _NullableStringPK
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableStringPK(
     String? id,
   ) {
@@ -140,6 +144,7 @@ class NullableStringPK extends _NullableStringPK
 
 class ObjectIdPK extends _ObjectIdPK
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   ObjectIdPK(
     ObjectId id,
   ) {
@@ -172,6 +177,7 @@ class ObjectIdPK extends _ObjectIdPK
 
 class NullableObjectIdPK extends _NullableObjectIdPK
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableObjectIdPK(
     ObjectId? id,
   ) {
@@ -206,6 +212,7 @@ class NullableObjectIdPK extends _NullableObjectIdPK
 }
 
 class UuidPK extends _UuidPK with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   UuidPK(
     Uuid id,
   ) {
@@ -238,6 +245,7 @@ class UuidPK extends _UuidPK with RealmEntity, RealmObjectBase, RealmObject {
 
 class NullableUuidPK extends _NullableUuidPK
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   NullableUuidPK(
     Uuid? id,
   ) {

@@ -8,6 +8,7 @@ part of 'indexable_types.dart';
 
 class Indexable extends _Indexable
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   Indexable(
     bool aBool,
     int anInt,

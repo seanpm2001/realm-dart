@@ -8,6 +8,7 @@ part of 'another_mapto.dart';
 
 class MappedToo extends _MappedToo
     with RealmEntity, RealmObjectBase, RealmObject {
+  @ejson
   MappedToo({
     Original? singleLink,
     Iterable<Original> listLink = const [],
