@@ -24,7 +24,7 @@ import '../lib/realm.dart';
 
 import 'test.dart';
 
-part 'realm_object_test.g.dart';
+part 'realm_object_test.realm.dart';
 
 @RealmModel()
 class _ObjectIdPrimaryKey {

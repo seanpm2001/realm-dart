@@ -16,14 +16,12 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-import 'dart:io';
-
 import 'package:test/test.dart' hide test, throws;
 import '../lib/realm.dart';
 
 import 'test.dart';
 
-part 'realm_value_test.g.dart';
+part 'realm_value_test.realm.dart';
 
 @RealmModel(ObjectType.embeddedObject)
 class _TuckedIn {

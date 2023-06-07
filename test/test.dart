@@ -32,7 +32,7 @@ import '../lib/src/cli/atlas_apps/baas_client.dart';
 import '../lib/src/native/realm_core.dart';
 import '../lib/src/configuration.dart';
 
-part 'test.g.dart';
+part 'test.realm.dart';
 
 @RealmModel()
 class _Car {
@@ -375,7 +375,7 @@ void xtest(String? name, dynamic Function() testFunction, {dynamic skip, Map<Str
 Future<void> setupTests(List<String>? args) async {
   arguments = parseTestArguments(args);
   testName = arguments["name"];
-  
+
   setUpAll(() async => await (_baasSetupResult ??= setupBaas()));
 
   setUp(() {

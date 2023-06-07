@@ -1017,7 +1017,7 @@ Future<void> main([List<String>? args]) async {
     Future<void>.delayed(Duration(milliseconds: 10), () => transaction.commit());
 
     final transaction1 = await realm.beginWriteAsync();
-    
+
     await transaction1.commitAsync();
 
     expect(transaction.isOpen, false);
