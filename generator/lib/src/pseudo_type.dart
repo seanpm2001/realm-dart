@@ -44,7 +44,7 @@ class PseudoType extends TypeImpl {
   }
 
   @override
-  String? get name => _name;
+  String? get name => _never;
 
   @override
   PseudoType withNullability(NullabilitySuffix nullabilitySuffix) {
@@ -52,8 +52,8 @@ class PseudoType extends TypeImpl {
   }
 
   @override
-  Element? get element2 => null;
+  Element? get element2 => _never;
 
   @override
-  Element? get element => _never;
+  Element? get element => null;
 }

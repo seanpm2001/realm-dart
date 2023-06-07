@@ -34,7 +34,7 @@ extension DartTypeEx on DartType {
   bool get isRealmValue => const TypeChecker.fromRuntime(RealmValue).isAssignableFromType(this);
   bool get isRealmCollection => realmCollectionType != RealmCollectionType.none;
   bool get isRealmSet => realmCollectionType == RealmCollectionType.set;
-  bool get isRealmModel => element2 != null ? realmModelChecker.annotationsOfExact(element2!).isNotEmpty : false;
+  bool get isRealmModel => element != null ? realmModelChecker.annotationsOfExact(element!).isNotEmpty : false;
 
   bool get isNullable => session.typeSystem.isNullable(this);
   DartType get asNonNullable => session.typeSystem.promoteToNonNull(this);
@@ -49,7 +49,7 @@ extension DartTypeEx on DartType {
     return RealmCollectionType.none;
   }
 
-  DartType? get nullIfDynamic => isDynamic ? null : this;
+  DartType? get nullIfDynamic => this is DynamicType ? null : this;
 
   DartType get basicType {
     final self = this;
