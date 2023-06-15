@@ -16,8 +16,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-import 'package:ejson/ejson.dart';
 import 'package:ejson_annotation/ejson_annotation.dart';
+import 'package:ejson_core/ejson_core.dart';
 import 'package:meta/meta.dart';
 import 'package:test/test.dart';
 

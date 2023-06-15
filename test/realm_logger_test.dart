@@ -20,10 +20,12 @@
 
 import 'dart:async';
 import 'dart:isolate';
+
 import 'package:logging/logging.dart';
 import 'package:test/test.dart' hide test, throws;
-import '../lib/src/realm_class.dart' show RealmInternal;
+
 import '../lib/realm.dart';
+import '../lib/src/realm_class.dart' show RealmInternal;
 import 'test.dart';
 
 const logLevels = [

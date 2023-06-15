@@ -16,19 +16,16 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-// ignore_for_file: unused_local_variable, avoid_relative_lib_imports
-
-import 'package:ejson_annotation/ejson_annotation.dart';
-import 'package:ejson/ejson.dart';
-
 import 'dart:io';
-import 'package:test/test.dart' hide test, throws;
-import '../lib/realm.dart';
 
+import 'package:ejson/ejson.dart';
+import 'package:test/test.dart' hide test, throws;
+
+import '../lib/realm.dart';
 import 'test.dart';
 
-part 'realm_object_test.realm.dart';
 part 'realm_object_test.g.dart';
+part 'realm_object_test.realm.dart';
 
 @RealmModel()
 class _ObjectIdPrimaryKey {

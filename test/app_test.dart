@@ -18,9 +18,10 @@
 
 import 'dart:convert';
 import 'dart:io';
-import 'package:test/expect.dart' hide throws;
-import 'package:path/path.dart' as path;
+
 import 'package:crypto/crypto.dart';
+import 'package:path/path.dart' as path;
+import 'package:test/expect.dart' hide throws;
 
 import '../lib/realm.dart';
 import '../lib/src/native/realm_core.dart';
