@@ -20,7 +20,7 @@ dependencies:
   collection: ^1.16.0
   crypto: ^3.0.0
   ejson_annotation: ^0.1.0
-  ejson: ^0.1.0
+  ejson_core: ^0.1.0
   ffi: ^2.0.1
   json_annotation: ^4.7.0
   logging: ^1.2.0
@@ -41,7 +41,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  ejson_generator: ^0.1.0  
+  ejson: ^0.1.0
+  ejson_generator: ^0.1.0
   lints: ^2.0.0
 
 flutter:
