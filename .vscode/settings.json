@@ -150,5 +150,6 @@
     "coroutine": "cpp",
     "ranges": "cpp",
     "span": "cpp"
-  }
+  },
+  "dart.flutterSdkPath": "/Users/kasper/Projects/flutter/stable"
 }
